@@ -48,97 +48,244 @@
    <!-- Usa
     class="float"
    cuando quieras que la etiqueta esté arriba todo el tiempo. -->
-   <p>
-    <label class="md-filled-text-field float">
-     <output name="respuesta">Todavía no hay respuesta</output>
-     <span>Respuesta</span>
-    </label>
-   </p>
-
-   <p>
-    <label class="md-filled-text-field">
-     <input name="nombre" required placeholder="Nombre*">
-     <span>Nombre *</span>
-     <small id="supportingNombre">Obligatorio</small>
-    </label>
-   </p>
-
-   <p>
-    <label class="md-filled-text-field">
-     <input name="email" type="email" placeholder="Email">
-     <span accesskey="M">Email</span>
-     <small id="supportingEmail">Texto con formato de email</small>
-    </label>
-   </p>
-
-   <p>
-    <label class="md-filled-text-field float">
-     <input name="fecha" type="date" placeholder="Fecha">
-     <span>Fecha de nacimiento</span>
-    </label>
-   </p>
-
-   <p>
-    <label class="md-filled-text-field">
-     <textarea name="dieccion" rows="3" placeholder="Dirección"></textarea>
-     <span>Dirección</span>
-    </label>
-   </p>
-
-   <p>
-    <button id="botonSaludo" class="md-filled-button">Saludar</button>
-    <button id="botonDatos" class="md-outline-button">Datos</button>
-   </p>
-
-  </section>
-
- </form>
-
- <script type="module">
-
-  import { muestraTextoDeAyuda } from "./js/lib/muestraTextoDeAyuda.js"
-
-  formulario.nombre.addEventListener("input", copiaMensajes)
-  formulario.email.addEventListener("input", copiaMensajes)
-  formulario.addEventListener("submit", procesa)
-
-  function copiaMensajes() {
-   muestraTextoDeAyuda(formulario.nombre, supportingNombre, "Obligatorio")
-   muestraTextoDeAyuda(
-    formulario.email, supportingEmail, "Texto con formato de email"
-   )
+  <style>
+  html {
+   color-scheme: light dark;
   }
+ </style>
+</head>
+<body>
+ <h1>GPS</h1>
+ <p>
+  <label>
+   Latitud
+   <output id="latitud"></output>
+  </label>
+ </p>
+ <p>
+  <label>
+   Longitud
+   <output id="longitud"></output>
+  </label>
+ </p>
+ <script>
+  navigator.geolocation.
+   watchPosition(p => {
+    latitud.value =
+     p.coords.latitude
+    longitud.value =
+     p.coords.longitude
+   });
+ </script>
+ 
+ <style>
+  html {
+   color-scheme: light dark;
+  }
+ </style>
 
-  /**
-   * @param {SubmitEvent} evt
-   */
-  function procesa(evt) {
-   evt.preventDefault()
-   copiaMensajes()
-   if (
-    formulario.nombre.validity.valid
-    && formulario.email.validity.valid
-    && formulario.fecha.validity.valid
-    && formulario.dieccion.validity.valid
-   ) {
-    const botonSeleccionado = evt.submitter
-    if (botonSeleccionado === botonSaludo) {
-     saluda()
-    } else if (botonSeleccionado === botonDatos) {
-     datos()
-    }
+ <h1>Archivos y Cámara</h1>
+ <p>
+  <label>
+   Foto de Móvil
+   <input type="file"
+     accept="image/*"
+     capture="camera">
+  </label>
+ </p>
+ <p>
+  <label>
+   Video de Móvil
+   <input type="file"
+     accept="video/*"
+     capture="">
+  </label>
+ </p>
+ <p>
+  <label>
+   Archivo
+   <input type="file">
+  </label>
+ </p>
+
+ <h1>Cámara</h1>
+ <p>
+  Para grabar o capturar imagen,
+  cliquea
+  <strong>Inicia</strong>.
+ </p>
+ <p>
+  Para grabar por 5 segundos
+  cliquea
+  <strong>Graba</strong>
+  y cliquea
+  <strong>Para</strong> para
+  detener.
+ </p>
+ <p>
+  Para capturar una imagen de la
+  cámara, cliquea
+  <strong>Captura</strong>.
+ </p>
+ <menu style="display: flex;
+   flex-wrap: wrap;
+   list-style: none;">
+  <li>
+   <button type="button"
+     onclick="inicia()">
+    Inicia
+   </button>
+  </li>
+  <li>
+   <button type="button"
+     onclick="graba()">
+    Graba
+   </button>
+  </li>
+  <li>
+   <button type="button"
+     onclick="para();">
+    Para
+   </button>
+  </li>
+  <li>
+   <button type="button"
+     onclick="captura()">
+    Captura
+   </button>
+  </li>
+ </menu>
+ <section
+   style="display: inline-block;
+     vertical-align: top;">
+  <h1>Preview</h1>
+  <video id="preview" width="160"
+    height="120" autoplay
+    muted></video>
+ </section>
+ <section
+   style="display: inline-block;
+     vertical-align: top;">
+  <h1>Recording</h1>
+  <video id="recording" width="160"
+    height="120" controls></video>
+  <p>
+   <a id="descarga">Descarga</a>
+  </p>
+  <div id="mensajes"></div>
+ </section>
+ <section
+   style="display: inline-block;
+     vertical-align: top;">
+  <h1>Imagen</h1>
+  <canvas id="canvas" width="160"
+    height="120"></canvas>
+  <p>
+   <a id="descargaImagen">
+    Descarga</a>
+  </p>
+ </section>
+ <script>
+  let stream = null
+  let TIEMPO_DE_GRABACION = 5000
+  var context =
+   canvas.getContext('2d')
+  async function inicia() {
+   try {
+    stream = await navigator
+     .mediaDevices.getUserMedia({
+      video: true,
+      audio: true
+     })
+    preview.srcObject = stream
+    descarga.href = stream
+    preview.captureStream =
+     preview.captureStream
+     || preview.mozCaptureStream
+    await new Promise(
+     resolve =>
+      preview.onplaying = resolve)
+   } catch (e) {
+    log(e.message)
    }
   }
-
-  function saluda() {
-   formulario.respuesta.value = `Hola ${formulario.nombre.value}`
+  async function graba() {
+   try {
+    const recordedChunks =
+     await grabaClip(stream,
+      TIEMPO_DE_GRABACION)
+    let recordedBlob = new Blob(
+     recordedChunks,
+     { type: "video/webm" })
+    recording.src =
+     URL.createObjectURL(
+      recordedBlob)
+    descarga.href = recording.src
+    descarga.download =
+     "RecordedVideo.webm"
+    log("Exitosamente grabados "
+     + recordedBlob.size
+     + " bytes de "
+     + recordedBlob.type
+     + " media.")
+   } catch (e) {
+    log(e.message)
+   }
   }
-
-  function datos() {
-   formulario.respuesta.value =
-    `Nombre: ${formulario.nombre.value} Email: ${formulario.email.value}`
+  function para() {
+   detiene(preview.srcObject)
   }
-
+  function captura() {
+   context.drawImage(preview,
+    0, 0, 160, 120)
+   descargaImagen.href =
+    canvas.toDataURL('image/jpeg')
+   descargaImagen.download =
+    "imagen.jpg"
+  }
+  function grabaClip(stream,
+   milisegundos) {
+   let recorder =
+    new MediaRecorder(stream)
+   let data = []
+   recorder.ondataavailable =
+    event => data.push(event.data)
+   recorder.start()
+   log(recorder.state
+    + " durante "
+    + (milisegundos / 1000)
+    + " segundos…")
+   let detenido = new Promise(
+    (resolve, reject) => {
+     recorder.onstop = resolve
+     recorder.onerror =
+      event => reject(event.name)
+    })
+   let grabado =
+    espera(milisegundos)
+     .then(() => recorder.state
+      === "recording"
+      && recorder.stop()
+     )
+   return Promise.all([
+    detenido,
+    grabado
+   ])
+    .then(() => data)
+  }
+  function detiene(stream) {
+   stream.getTracks().forEach(
+    track => track.stop())
+  }
+  function log(msg) {
+   mensajes.innerHTML +=
+    msg + "<br>"
+  }
+  function espera(milisegundos) {
+   return new Promise(
+    resolve => setTimeout(
+     resolve, milisegundos))
+  }
  </script>
 
 </body>
