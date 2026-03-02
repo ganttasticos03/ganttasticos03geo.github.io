@@ -1,8 +1,8 @@
 {
- "short_name": "Formulario PWA",
- "name": "PWA con Formulario",
- "id": "/index.html",
- "start_url": "/index.html",
+ "short_name": "Geolocalización PWA",
+ "name": "PWA Geolocalización y archivos",
+ "id": "/",
+ "start_url": "/",
  "display": "standalone",
  "theme_color": "#fffbfe",
  "background_color": "#fffbfe",
