@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Geolocalización</title>
-  <meta name="description" content="Geolocalización PWA">
+  <title>Archivos y cámara</title>
+  <meta name="description" content="Archivos y cámara PWA">
   <meta name="viewport" content="width=device-width">
   <meta name="theme-color" content="#fffbfe">
 
@@ -17,7 +17,7 @@
   <link rel="icon" sizes="32x32" href="favicon.ico">
   <link rel="manifest" href="site.webmanifest">
 
-  <script type="module" src="js/lib/registraServiceWorker.js"></script>
+  <!--<script type="module" src="js/lib/registraServiceWorker.js"></script>-->
   <script type="module" src="js/lib/manejaErrores.js"></script>
   <script src="ungap/custom-elements.js"></script>
 
@@ -38,7 +38,7 @@
     }
   </style>-->
 
-<link rel="stylesheet" href="css/theme/light.css">
+  <link rel="stylesheet" href="css/theme/light.css">
 <link rel="stylesheet" href="css/theme/dark.css">
 </head>
 
@@ -47,39 +47,38 @@
   <form id="formulario" novalidate>
 
     <md-app-bar class="centered" adicional="tab">
-      <h1>Geolocalización</h1>
+      <h1>Archivos y cámara</h1>
     </md-app-bar>
 
     <nav-tab-fixed id="tab"></nav-tab-fixed>
 
     <section>
-      <h1>GPS</h1>
+      
+<h1>Archivos y Cámara</h1>
+ <p>
+  <label>
+   Foto de Móvil
+   <input type="file"
+     accept="image/*"
+     capture="camera">
+  </label>
+ </p>
+ <p>
+  <label>
+   Video de Móvil
+   <input type="file"
+     accept="video/*"
+     capture="">
+  </label>
+ </p>
+ <p>
+  <label>
+   Archivo
+   <input type="file">
+  </label>
+ </p>
 
-      <p>
-        <label>
-          Latitud
-          <output id="latitud"></output>
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Longitud
-          <output id="longitud"></output>
-        </label>
-      </p>
-    </section>
-
-  </form>
-
-  <script>
-    navigator.geolocation.watchPosition(p => {
-      latitud.value = p.coords.latitude
-      longitud.value = p.coords.longitude
-    });
-  </script>
-
-  <script>
+ <script>
   const html = document.documentElement;
 
   function aplicarTema(tema) {

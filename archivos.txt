@@ -1,70 +1,51 @@
-
-Directory                                                                        Name
----------                                                                        ----
-                                                                                 css
-                                                                                 fonts
-                                                                                 img
-                                                                                 js
-                                                                                 ungap
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               .htaccess
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               archivos.txt
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               ayuda.html
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               favicon.ico
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               index.html
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               instruccionesListadoSw.txt
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               jsconfig.json
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               LICENSE
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               README.md
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               site.webmanifest
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io               sw.js
-                                                                                 theme
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           baseline.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           colors.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           elevation.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           estilos.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           material-symbols-outlined.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-filled-button.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-filled-text-field.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-headline.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-list.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-outline-button.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           md-tab.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           motion.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           palette.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           roboto.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           shape.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           state.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           transicion_pestanas.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css           typography.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css\theme     dark.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\css\theme     light.css
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\fonts         MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\fonts         MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\fonts         MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\fonts         roboto-v32-latin-regular.woff2
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           icono2048.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x128.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x192.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x384.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x48.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x512.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x72.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon_x96.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           maskable_icon.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           screenshot_horizontal.png
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\img           screenshot_vertical.png
-                                                                                 lib
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js            nav-tab-fixed.js
-                                                                                 custom
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        ES_APPLE.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        getAttribute.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        manejaErrores.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        muestraError.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        muestraTextoDeAyuda.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        ProblemDetailsError.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        querySelector.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        registraServiceWorker.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib        resaltaSiEstasEn.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\js\lib\custom md-app-bar.js
-C:\Users\angel\OneDrive\Documentos\pwa\ganttasticos03geo.github.io\ungap         custom-elements.js
-
+"ayuda.html",
+"favicon.ico",
+"index.html",
+"site.webmanifest",
+"css/baseline.css",
+"css/colors.css",
+"css/elevation.css",
+"css/estilos.css",
+"css/material-symbols-outlined.css",
+"css/md-filled-button.css",
+"css/md-filled-text-field.css",
+"css/md-headline.css",
+"css/md-list.css",
+"css/md-outline-button.css",
+"css/md-tab.css",
+"css/motion.css",
+"css/palette.css",
+"css/roboto.css",
+"css/shape.css",
+"css/state.css",
+"css/transicion_pestanas.css",
+"css/typography.css",
+"css/theme/dark.css",
+"css/theme/light.css",
+"fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints",
+"fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf",
+"fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2",
+"fonts/roboto-v32-latin-regular.woff2",
+"img/icono2048.png",
+"img/maskable_icon_x128.png",
+"img/maskable_icon_x192.png",
+"img/maskable_icon_x384.png",
+"img/maskable_icon_x48.png",
+"img/maskable_icon_x512.png",
+"img/maskable_icon_x72.png",
+"img/maskable_icon_x96.png",
+"img/maskable_icon.png",
+"img/screenshot_horizontal.png",
+"img/screenshot_vertical.png",
+"js/nav-tab-fixed.js",
+"js/lib/ES_APPLE.js",
+"js/lib/getAttribute.js",
+"js/lib/manejaErrores.js",
+"js/lib/muestraError.js",
+"js/lib/muestraTextoDeAyuda.js",
+"js/lib/ProblemDetailsError.js",
+"js/lib/querySelector.js",
+"js/lib/registraServiceWorker.js",
+"js/lib/resaltaSiEstasEn.js",
+"js/lib/custom/md-app-bar.js",
+"ungap/custom-elements.js",
